@@ -83,12 +83,26 @@ html {
           }
 
           button{
-
-              padding:20px;   
-            background: red;
+            margin: 30px;
+            border:0px;
+            padding:10px 80px;   
+            background: #FF7841;
             border-radius: 50px;
+            font-size: 18px;
+            color: white;
           }
       }
+      #lineUp{
+        border: 1px solid red;
+        .header{
+          margin:50px;
+          h1{
+            padding-bottom: 30px;
+            border-bottom: 1px solid black;
+          }
+        }
+      }
+
     }
 
   }
