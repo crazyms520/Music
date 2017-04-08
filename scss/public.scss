@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @author      OA Wu <comdan66@gmail.com>
  * @copyright   Copyright (c) 2016 OA Wu Design
  */
@@ -330,14 +330,181 @@ html {
             text-align: left;
           }
           .word{
-
+            div{
+              margin-right: 15px;
+              margin-bottom: 10px;
+              *zoom: 1;
+              &:after{
+                display: table;
+                content: '';
+                line-height: 0;
+                clear: both;
+              }
+              > *{
+                display: inline-block;
+                float: left;                
+              }
+              i{
+                margin-right: 15px;
+              }
+              h4{
+                margin: 0;
+                p{
+                  font-size: 14px;
+                }
+              }
+            }
+            
           }
           .img{
-            height: 100%;
-            background-color: solid rgba(172, 172, 172, 1.00);
+            height: 290px;
+            background-color: rgba(172, 172, 172, 1.00);
           }
 
         }
+      }
+
+      #passes{
+        margin: 40px;
+        height: 100%;
+        background-color: purple;
+        color: white;
+        .header{
+          margin:50px;
+          p{
+            padding-top: 50px;
+          }
+          h1{
+            margin:50px;
+            margin-top: 0;
+            padding-bottom: 30px;
+            border-bottom: 1px solid white;
+          }
+        }
+
+        .saleInfo{
+          margin: 100px;
+          margin-top: 10px;
+          margin-bottom: 5px;
+          height: 130px;
+          background-color: white;
+          border-radius: 5px;
+          *zoom: 1;
+          &:after{
+            display: table;
+            content: '';
+            line-height: 0;
+            clear: both;
+          }
+          > *{
+            display: inline-block;
+            float: left;
+          }
+          .price{
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            margin: 30px;
+            margin-right:0;
+            margin-bottom: 0;
+            border-radius: 4px;
+            background-color: orange;
+            p{
+              line-height: 15px;
+            }
+          }
+          ul{
+                color: black;
+                margin-top: 50px;
+            }
+          button{
+            margin-top:50px;
+            margin-left:10px;
+            border:0px;
+            padding:10px 10px;   
+            background-color: white;
+            border-radius: 50px;
+            border: 1px solid rgba(172, 172, 172, 1.00);
+            font-size: 16px;
+            color: rgba(172, 172, 172, 1.00);
+          }
+        }
+
+        button{
+            margin-top:30px;
+            margin-bottom:40px;
+            border:0px;
+            padding:10px 10px;   
+            background-color: white;
+            border-radius: 50px;
+            border: 1px solid rgba(172, 172, 172, 1.00);
+            font-size: 16px;
+            color: rgba(172, 172, 172, 1.00);
+          }
+      }
+
+      #last{
+        margin: 50px;
+        *zoom: 1;
+        &:after{
+          display:table;
+          content: '';
+          line-height: 0;
+          clear: both;
+        }
+        > *
+        {
+          text-align: left;
+          width: (100% / 2);
+          display: inline-block;
+          float: left;
+        }
+        .left{
+          button{
+            margin-top:30px;
+            margin-bottom:40px;
+            border:0px;
+            padding:10px 10px;   
+            background-color: white;
+            border-radius: 50px;
+            border: 1px solid rgba(172, 172, 172, 1.00);
+            font-size: 16px;
+            color: rgba(172, 172, 172, 1.00);
+          }
+        }
+        .right{
+          .one{
+            ul{
+              padding-left: 20px;
+            }
+          }
+          .two{
+            *zoom: 1;
+            &:after{
+              display:table;
+              content: '';
+              line-height: 0;
+              clear: both;
+            }
+            div{
+              width:50px;
+              height:50px;
+              text-align: center;
+              margin-right: 10px;
+              border-radius: 4px;
+              padding-top:15px;
+              background-color: #A6A7A6;
+              display: inline-block;
+              float: left;
+            }
+          }
+        }
+        
+      }
+      #footer{
+        margin:50px;
+        height:100px;
+        background-color: #19191E;
       }
 
 
