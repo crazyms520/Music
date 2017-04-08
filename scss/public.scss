@@ -5,11 +5,37 @@
 
 @import "_oa";
 
-// @include font-face("icomoon", font-files("icomoon/icomoon.eot", "icomoon/icomoon.woff", "icomoon/icomoon.ttf", "icomoon/icomoon.svg"));
-// [class^="icon-"], [class*=" icon-"] {
-//   font-family: 'icomoon', Roboto,RobotoDraft,Helvetica,Arial,sans-serif,"微軟正黑體", "Microsoft JhengHei"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1;
-//   @include font-smoothing(antialiased);
-// }
+@include font-face("Monaco", font-files("Monaco/Monaco.ttf", "Monaco/Monaco.otf"));
+@include font-face("icomoon", font-files("icomoon/icomoon.eot", "icomoon/icomoon.woff", "icomoon/icomoon.ttf", "icomoon/icomoon.svg"));
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon', Roboto,RobotoDraft,Helvetica,Arial,sans-serif,"微軟正黑體", "Microsoft JhengHei"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1;
+  @include font-smoothing(antialiased);
+}
+
+
+
+
+.icon-search:before {
+  content: "\e900";
+}
+.icon-location2:before {
+  content: "\e948";
+}
+.icon-clock:before {
+  content: "\e94e";
+}
+.icon-calendar:before {
+  content: "\e953";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
 
 * {
   &, &:after, &:before {
@@ -278,6 +304,42 @@ html {
           border: 1px solid rgba(172, 172, 172, 1.00);
           font-size: 16px;
           color: rgba(172, 172, 172, 1.00);
+        }
+      }
+
+      #about{
+        margin-top:150px;
+        .header{
+          margin:50px;
+          h1{
+            padding-bottom: 30px;
+            border-bottom: 1px solid black;
+          }
+        }
+        .info{
+          margin: 50px;
+          *zoom: 1;
+          &:after{
+            display: table;
+            content: '';
+            line-height: 0;
+            clear: both;
+          }
+
+          > *{
+            width:calc((100% - 20px) / 2);
+            display: inline-block;
+            float: left;
+            text-align: left;
+          }
+          .word{
+
+          }
+          .img{
+            height: 100%;
+            background-color: solid rgba(172, 172, 172, 1.00);
+          }
+
         }
       }
 
