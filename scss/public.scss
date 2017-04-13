@@ -77,7 +77,6 @@ html {
                 width: 100%;
                 padding: 40px;
             }
-
             .menu{
                 width: 100%;
                 background-color: rgba(39, 40, 34, 1.00);
@@ -101,6 +100,15 @@ html {
                         color: rgba(255, 255, 255, 1.00);
                         text-decoration: none;
                     }
+                    @include range-width(0,600px) {
+                        padding: 0 20px;
+                        a{
+                            width: (100% / 3 );
+                            padding:5px;
+                        }    
+                        
+                    }
+                
                 }
             }
         }
@@ -117,33 +125,42 @@ html {
                 p{
                     color: rgba(248, 248, 242, 1.00);
 
-                    &:first-child{
+                    &:nth-child(1){
                         margin-top: 70px;
                         margin-bottom: 0;
-                        // padding: 10px;
+                    }
+                    &:nth-child(3){
+                        color: rgba(248, 248, 242, 1.00);
+                        padding: 0 50px;
                     }
 
-                    &:last-child{
-                        text-align: center;
-                        padding: 40px;
-                        margin: 0;
-                    }
                 }
-                
+
+
                 h1{
                     display:inline-block;
                     width: 100%;
-                    margin: 20px;
+                    margin: 20px 0;
                     font-size:100px;
-                    color: rgba(248, 248, 242, 1.00);   
+                    color: rgba(248, 248, 242, 1.00); 
+                    @media screen and (max-width: 380px - 1px) and (min-width: 330px){
+                        font-size: 90px;
+                    }  
+
+                    @media screen and (max-width: 330px - 1px){
+                        font-size: 80px;
+                    }  
                 }
 
                 button{
                     @include border-radius(30px);
                     border: 0;
-                    padding: 15px 80px;
+                    padding: 15px 70px;
                     margin: 20px;
-                    margin-bottom: 50px;
+                    margin-bottom: 70px;
+                    font-size: 16px;
+                    color: rgba(255, 255, 255, 1.00);
+                    background-color: rgba(255, 109, 58, 1.00);
                     
                 }
             }
