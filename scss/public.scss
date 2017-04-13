@@ -71,42 +71,84 @@ html {
         background: white;
         color: rgba(50, 50, 50, 0.8);
         @include font-smoothing(antialiased);
-
-        .head{
+        #header{
             width: 100%;
-
-            border: 1px solid red;
             .logo{
                 width: 100%;
                 padding: 40px;
             }
-        }
 
-        .menu{
-            width: 100%;
-            
-            background-color: rgba(39, 40, 34, 1.00);
-            .container{
-                display: inline-block;
-                max-width: 960px;
+            .menu{
                 width: 100%;
-                margin: 0 auto;
-                padding:20px;
-                *zoom: 1;
-                &:after{
-                    display: table;
-                    content: '';
-                    line-height: 0;
-                    clear: both;
-                }
-                a{
+                background-color: rgba(39, 40, 34, 1.00);
+                .container{
                     display: inline-block;
-                    float: left;
-                    width: (100% / 6 );
-                    color: rgba(255, 255, 255, 1.00);
-                    text-decoration: none;
+                    max-width: 960px;
+                    width: 100%;
+                    margin: 0 auto;
+                    padding:20px;
+                    *zoom: 1;
+                    &:after{
+                        display: table;
+                        content: '';
+                        line-height: 0;
+                        clear: both;
+                    }
+                    a{
+                        display: inline-block;
+                        float: left;
+                        width: (100% / 6 );
+                        color: rgba(255, 255, 255, 1.00);
+                        text-decoration: none;
+                    }
                 }
             }
         }
+
+        #banner{
+            width:100%;
+            background-image: url('../img/banner.jpg');
+            background-size: cover;
+            background-position: center;
+            .container{        
+                display: inline-block;
+                max-width: 960px;
+                width:100%;
+                p{
+                    color: rgba(248, 248, 242, 1.00);
+
+                    &:first-child{
+                        margin-top: 70px;
+                        margin-bottom: 0;
+                        // padding: 10px;
+                    }
+
+                    &:last-child{
+                        text-align: center;
+                        padding: 40px;
+                        margin: 0;
+                    }
+                }
+                
+                h1{
+                    display:inline-block;
+                    width: 100%;
+                    margin: 20px;
+                    font-size:100px;
+                    color: rgba(248, 248, 242, 1.00);   
+                }
+
+                button{
+                    @include border-radius(30px);
+                    border: 0;
+                    padding: 15px 80px;
+                    margin: 20px;
+                    margin-bottom: 50px;
+                    
+                }
+            }
+        }
+        
     }
+
 }
