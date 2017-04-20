@@ -166,6 +166,8 @@ html{
 
         #Lineup{
             padding-top: 50px;
+            padding-right: 20px;
+            padding-left: 20px;
             .container{
                 display: inline-block;
                 max-width: 960px;
@@ -218,11 +220,11 @@ html{
                     }
 
                     @media screen and (max-width: 600 - 1px) and (min-width: 400px){
-                        width: calc(100% / 2 - 30px / 2);
+                        width: calc(100% / 2 - 20px / 2);
 
                         &:nth-child(odd)
                         {
-                            margin:0 10px; 
+                            margin-right: 20px; 
                         }
 
                         &:nth-child(even)
@@ -238,9 +240,9 @@ html{
                     } 
 
                     @media screen and (max-width: 400 - 1px) and (min-width: 0){
-                        width: calc(100% - 30px);
+                        width: calc(100%);
                         margin: 0;
-                        margin: 10px 10px 0 10px;
+                        margin-top: 10px;
                     } 
                 }
 
@@ -258,6 +260,8 @@ html{
 
         #Gallery{
             padding-top: 50px;
+            padding-right: 20px;
+            padding-left: 20px;
             .container{
                 display: inline-block;
                 max-width: 960px;
@@ -304,11 +308,11 @@ html{
                     }
 
                     @media screen and (max-width: 600 - 1px) and (min-width: 400px){
-                        width: calc(100% / 2 - 30px / 2);
+                        width: calc(100% / 2 - 20px / 2);
 
                         &:nth-child(odd)
                         {
-                            margin:0 10px; 
+                            margin-right: 20px; 
                         }
 
                         &:nth-child(even)
@@ -324,9 +328,9 @@ html{
                     } 
 
                     @media screen and (max-width: 400 - 1px) and (min-width: 0){
-                        width: calc(100% - 30px);
+                        width: calc(100%);
                         margin: 0;
-                        margin: 10px 10px 0 10px;
+                        margin-top: 10px;
                     } 
                 }
 
@@ -349,9 +353,7 @@ html{
                 display: inline-block;
                 max-width: 960px;
                 width:100%;
-                text-align: left;
-                @media screen and (max-width: 1060 - 1px) and (min-width: 0){
-                } 
+                text-align: left;                
                 .register{
                     *zoom: 1;
                     &:after{
@@ -371,14 +373,15 @@ html{
                     .content{
                         display: inline-block;
                         float: left;
-                        
-                        /*padding: 5px calc(100% - 80px);*/
                         padding: 5px 40px 5px 40px;
                         font-size: 40px;
                         color: rgba(255, 255, 253, 1.00);
                         font-weight: bolder;
                         letter-spacing: 2px;
-                    }    
+                        @media screen and (max-width: 500 - 1px) and (min-width: 0){
+                        }
+                            padding: 5px 0;
+                        }    
                     a{
                         display: inline-block;
                         margin-top: 5px;
@@ -456,6 +459,9 @@ html{
 
         #About{
             padding-top: 50px;
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 50px;
             .container{
                 display: inline-block;
                 max-width: 960px;
@@ -472,15 +478,19 @@ html{
                     font-size: 40px;
                     font-weight: bolder;
                     padding-bottom: 40px;
+
                     border-bottom: 1px solid rgba(39, 40, 34, 1.00);
                 }
 
                 .info{
                     display: inline-block;
                     float: left;
-                    margin-right: 20px;
+                    margin-right: 10px;
                     text-align: left;
                     width: calc(100% / 2 - 20px / 2);
+                    @media screen and (max-width: 500 - 1px) and (min-width: 0){
+                        width: calc(100% - 10px / 2);
+                    }
                     span{
                             font-weight: bolder;    
                         i{
@@ -489,6 +499,9 @@ html{
                     }
                     p{
                         padding-left: 31px;
+                        line-height: 24px;
+                        margin-top: 10px;
+                        margin-bottom: 20px;
                         *zoom: 1;
                         &:after{
                             display: table;
@@ -517,21 +530,16 @@ html{
                             }
                         }
                         span{
-                            border: 1px solid red;
                             display: inline-block;
                             margin-right: 5px;
-                            text-align: center;
                             float: left;
-                            width: 30px;
-                            height: 30px;
-                            line-height: 30px;
-                            padding-top: calc(100% / 2px);
                             background-color: rgba(237, 237, 237, 1.00);
                             border-radius: 5px;
 
                             i{
-                                display: inline;
-                                padding: 0;
+
+                                display: inline-block;
+                                padding: 10px;
                             }
                             
                         }
@@ -540,12 +548,95 @@ html{
 
                 .images{
                     display: inline-block;
+                    margin-right: 10px;
                     float: left;   
-                    border: 1px solid red;
                     width: calc(100% / 2 - 20px / 2);
-                    height: 500px;
+                    height: 340px;
+                    @media screen and (max-width: 500 - 1px) and (min-width: 0){
+                        width: calc(100%);
+                    }
+
+                    iframe{
+                        width: 100%;
+                        height: 100%;
+
+                    }
+
+                    
 
                 }
+            }
+        }
+
+        #Passes{
+            padding-top: 50px;
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 50px;
+            background-color: rgba(48, 43, 66, 1.00);
+            color: rgba(255, 255, 255, 1.00);
+            .container{
+                display: inline-block;
+                max-width: 960px;
+                width:100%;
+                *zoom: 1;  
+                &:after{
+                    display: table;
+                    content: '';
+                    line-height: 0;
+                    clear: both;
+                }  
+
+                .title{
+                    font-size: 40px;
+                    font-weight: bolder;
+                    padding-bottom: 40px;
+                    border-bottom: 1px solid rgba(171, 171, 171, 1.00);
+                }
+
+                .price{
+                    margin-top: 10px;
+                    background-color: rgba(245, 245, 245, 1.00);
+                    border-radius: 5px;
+                    text-align: right;
+                    *zoom: 1;  
+                    &:after{
+                        display: table;
+                        content: '';
+                        line-height: 0;
+                        clear: both;
+                    } 
+                    
+                    div{
+                        padding: 20px 20px;
+                        padding-right: 100px;
+                        display: inline-block;
+                        float: left;
+                        p{
+                            color: rgba(171, 171, 171, 1.00);
+                        }
+
+                        a{
+                            display: inline-block;
+                            padding:10px 40px;
+                            margin-top: 20px;
+                            color: rgba(171, 171, 171, 1.00);
+                            letter-spacing: 1px;
+                            line-height: 20px;
+                            border: 2px solid rgba(171, 171, 171, 1.00);
+                            border-radius: 20px;
+                            font-weight: bolder;
+                        }
+                    }  
+
+                    .dayP{
+                        background-color: rgba(255, 109, 58, 1.00);
+                        margin: 20px;
+                        padding: 0 20px;
+                    }
+                }
+
+                
             }
         }
     }
