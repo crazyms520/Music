@@ -373,26 +373,35 @@ html{
                     .content{
                         display: inline-block;
                         float: left;
-                        padding: 5px 40px 5px 40px;
+                        padding: 0 40px;
+                        width: calc( 100% - 50px - 200px);
                         font-size: 40px;
                         color: rgba(255, 255, 253, 1.00);
                         font-weight: bolder;
                         letter-spacing: 2px;
-                        @media screen and (max-width: 500 - 1px) and (min-width: 0){
-                        }
+                        @media screen and (max-width: 650 - 1px) and (min-width: 400px){
+                            width: 100%;
                             padding: 5px 0;
-                        }    
+                        } 
+                        @media screen and (max-width: 400 - 1px) and (min-width: 0){
+                            padding: 5px 0 ;
+                        } 
+                    }
                     a{
                         display: inline-block;
+                        float: right;
                         margin-top: 5px;
                         padding:10px 40px;
                         line-height: 20px;
-                        float: left;
                         border: 2px solid rgba(253, 239, 230, 1.00);
                         border-radius: 20px;
                         color: rgba(255, 255, 253, 1.00);
                         font-weight: bolder;
                         letter-spacing: 1px;
+                        @media screen and (max-width: 650 - 1px) and (min-width: 400px){
+                            padding:10px 30px;
+                            float: left;
+                        } 
                     }
                 }
             }
@@ -609,11 +618,30 @@ html{
                     
                     div{
                         padding: 20px 20px;
-                        padding-right: 100px;
+                        /*padding-right: 100px;*/
                         display: inline-block;
-                        float: left;
+                        float: left;    
                         p{
                             color: rgba(171, 171, 171, 1.00);
+                        }
+
+                        &:nth-child(2)
+                        {
+                            p{
+                                &:before{
+                                    content: '';
+                                    width: 0;
+                                    padding: 5px;
+                                    border-radius: 100px;
+                                    background-color: rgba(255, 109, 58, 1.00);
+                                }    
+
+                            }
+                        }
+                        &:nth-child(3)
+                        {
+                            float: right;    
+                            padding: 20px 30px;
                         }
 
                         a{
@@ -633,6 +661,7 @@ html{
                         background-color: rgba(255, 109, 58, 1.00);
                         margin: 20px;
                         padding: 0 20px;
+                        border-radius: 5px;
                     }
                 }
 
