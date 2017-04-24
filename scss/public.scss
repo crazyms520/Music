@@ -604,10 +604,10 @@ html{
                 }
 
                 .price{
-                    margin-top: 10px;
-                    background-color: rgba(245, 245, 245, 1.00);
+                    margin-top: 16px;
                     border-radius: 5px;
-                    text-align: right;
+                    background-color: rgba(245, 245, 245, 1.00);
+
                     *zoom: 1;  
                     &:after{
                         display: table;
@@ -615,57 +615,75 @@ html{
                         line-height: 0;
                         clear: both;
                     } 
-                    
-                    div{
-                        padding: 20px 20px;
-                        /*padding-right: 100px;*/
+
+                    > * {
                         display: inline-block;
                         float: left;    
-                        p{
-                            color: rgba(171, 171, 171, 1.00);
-                        }
-
-                        &:nth-child(2)
-                        {
-                            p{
-                                &:before{
-                                    content: '';
-                                    width: 0;
-                                    padding: 5px;
-                                    border-radius: 100px;
-                                    background-color: rgba(255, 109, 58, 1.00);
-                                }    
-
-                            }
-                        }
-                        &:nth-child(3)
-                        {
-                            float: right;    
-                            padding: 20px 30px;
-                        }
-
-                        a{
-                            display: inline-block;
-                            padding:10px 40px;
-                            margin-top: 20px;
-                            color: rgba(171, 171, 171, 1.00);
-                            letter-spacing: 1px;
-                            line-height: 20px;
-                            border: 2px solid rgba(171, 171, 171, 1.00);
-                            border-radius: 20px;
-                            font-weight: bolder;
-                        }
-                    }  
+                    }
 
                     .dayP{
-                        background-color: rgba(255, 109, 58, 1.00);
+                        padding: 15px;
                         margin: 20px;
-                        padding: 0 20px;
-                        border-radius: 5px;
-                    }
-                }
+                        width: 80px;
+                        height: 80px;
 
-                
+                        @include border-radius(2px);
+                        background-color: rgba(255, 109, 58, 1.00);
+                        span{
+                            display: inline-block;
+                            width: 100%;
+                            font-size: 12px;
+                            text-align: center;
+
+                            &:last-child{
+                                font-size: 25px;
+                                font-weight: bolder;
+
+                                &:before{
+                                    content: '$';
+                                    font-size: 14px;
+
+                                }
+                            }
+                        }
+                    }
+
+                    .desc{
+                        margin-top: 40px;
+                        width: calc(100% - 120px - 200px);
+                        height: 80px;
+                        color: rgba(138, 138, 138, 1.00);
+                        span{
+                           display: inline-block;
+                           text-align: left;
+                           width: 100%; 
+                           &:before{
+                            content: '';
+                            display: inline-block;
+                            margin-top: 5px;
+                            margin-right: 5px;
+                            width: 7px;
+                            height: 7px;
+                            background-color: rgba(255, 109, 58, 1.00);
+                            @include border-radius(50%);
+                           }
+                        }
+                        
+                    }
+
+                    a{
+                        margin-top: 40px;
+                        margin-right: 20px;
+                        width: 160px;
+                        height: 50px;
+                        line-height: 20px;
+                        border: 2px solid rgba(171, 171, 171, 1.00);
+                        border-radius: calc(150px / 2);
+                        font-weight: bolder;
+                        letter-spacing: 1px;
+                    }
+
+                }
             }
         }
     }
