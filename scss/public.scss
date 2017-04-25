@@ -604,10 +604,12 @@ html{
                 }
 
                 .price{
-                    margin-top: 16px;
-                    border-radius: 5px;
-                    background-color: rgba(245, 245, 245, 1.00);
 
+                    margin-top: 16px;
+                    padding: 20px;
+                    border-radius: 5px;
+                    height: auto;
+                    background-color: rgba(245, 245, 245, 1.00);
                     *zoom: 1;  
                     &:after{
                         display: table;
@@ -616,16 +618,25 @@ html{
                         clear: both;
                     } 
 
+                    @media screen and (max-width: 500 - 1px) and (min-width: 0){
+                            width: calc(100%);
+                    }
+
                     > * {
                         display: inline-block;
                         float: left;    
                     }
 
                     .dayP{
-                        padding: 15px;
-                        margin: 20px;
-                        width: 80px;
-                        height: 80px;
+                        padding: 25px;
+                        width: 100px;
+                        height: 100px;
+                        @media screen and (max-width: 500 - 1px) and (min-width: 0){
+                            width: calc(100%);
+                        }
+                        @media screen and (max-width: 650 - 1px) and (min-width: 500px){
+                            height: calc(100%);
+                        }
 
                         @include border-radius(2px);
                         background-color: rgba(255, 109, 58, 1.00);
@@ -633,8 +644,9 @@ html{
                             display: inline-block;
                             width: 100%;
                             font-size: 12px;
-                            text-align: center;
 
+                            text-align: center;
+                            
                             &:last-child{
                                 font-size: 25px;
                                 font-weight: bolder;
@@ -649,14 +661,16 @@ html{
                     }
 
                     .desc{
-                        margin-top: 40px;
+                        padding: 0 20px;
                         width: calc(100% - 120px - 200px);
-                        height: 80px;
+                        height: auto;
+                        overflow: hidden;
                         color: rgba(138, 138, 138, 1.00);
                         span{
                            display: inline-block;
                            text-align: left;
                            width: 100%; 
+                           padding-bottom: 10px;
                            &:before{
                             content: '';
                             display: inline-block;
@@ -668,21 +682,44 @@ html{
                             @include border-radius(50%);
                            }
                         }
+                        @media screen and (max-width: 500 - 1px) and (min-width: 0){
+                            padding: 10px 10px 10px 0;
+                            width: calc(100%);
+                        }
                         
                     }
 
                     a{
-                        margin-top: 40px;
-                        margin-right: 20px;
+                        display: inline-block;
+                        float: right;
+                        margin-top: 20px;
                         width: 160px;
                         height: 50px;
-                        line-height: 20px;
-                        border: 2px solid rgba(171, 171, 171, 1.00);
+                        line-height: 50px;
                         border-radius: calc(150px / 2);
                         font-weight: bolder;
                         letter-spacing: 1px;
+                        border: 2px solid rgba(171, 171, 171, 1.00);
+                        color: rgba(184, 184, 184, 1.00);
+                        @media screen and (max-width: 500 - 1px) and (min-width: 0){
+                            margin: 0 auto;
+                        }
                     }
-
+                }
+            }
+            a{
+                display: inline-block;
+                margin: 30px auto;
+                width: 160px;
+                height: 50px;
+                line-height: 50px;
+                border-radius: calc(150px / 2);
+                font-weight: bolder;
+                letter-spacing: 1px;
+                border: 2px solid rgba(171, 171, 171, 1.00);
+                color: rgba(184, 184, 184, 1.00);
+                @media screen and (max-width: 500 - 1px) and (min-width: 0){
+                    margin: 0 auto;
                 }
             }
         }
