@@ -43,6 +43,10 @@ html{
         background: white;
         color: rgba(50, 50, 50, 0.8);
         @include font-smoothing(antialiased);
+        .blue{
+            background-color:rgba(69, 139, 244, 0.3);
+            color: white;
+        }
         .content{
             display: inline-block;
             width: 500px;
