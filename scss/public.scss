@@ -135,7 +135,7 @@ html{
                         padding: 0 50px;
                     }
                 }
-
+                
                 h1{
                     display:inline-block;
                     width: 100%;
@@ -735,7 +735,7 @@ html{
                 width: 100%;
                 *zoom: 1;
                 &:after{
-                    dispaly: table;
+                    display: table;
                     content: '';
                     line-height: 0;
                     clear: both;
