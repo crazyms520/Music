@@ -20,7 +20,6 @@ $(function(){
             var content = $('<div />').addClass ('list').append($('<span />').text('你的數字：'+num+' 結果： '+result)).append($('<a />').text());
             $('.lists').append(content);
         }
-        
     })
-
 }); 
+
